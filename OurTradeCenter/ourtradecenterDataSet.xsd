@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ourtradecenterDataSet" targetNamespace="http://tempuri.org/ourtradecenterDataSet.xsd" xmlns:mstns="http://tempuri.org/ourtradecenterDataSet.xsd" xmlns="http://tempuri.org/ourtradecenterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ourtradecenterConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ourtradecenterConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ControlaEstoque.Properties.Settings.GlobalReference.Default.ourtradecenterConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatoriofuncionarioTableAdapter" GeneratorDataComponentClassName="relatoriofuncionarioTableAdapter" Name="relatoriofuncionario" UserDataComponentName="relatoriofuncionarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatoriofuncionario" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Cod`, `Nome`, `CPF`, `DataNascimento`, `Sexo`, `Telefone`, `Email`, `Cargo`, `Logradouro`, `Num`, `Comp`, `Bairro`, `Cidade`, `Estado`, `CEP` FROM `ourtradecenter`.`relatoriofuncionario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod" DataSetColumn="Cod" />
+              <Mapping SourceColumn="Nome" DataSetColumn="Nome" />
+              <Mapping SourceColumn="CPF" DataSetColumn="CPF" />
+              <Mapping SourceColumn="DataNascimento" DataSetColumn="DataNascimento" />
+              <Mapping SourceColumn="Sexo" DataSetColumn="Sexo" />
+              <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Cargo" DataSetColumn="Cargo" />
+              <Mapping SourceColumn="Logradouro" DataSetColumn="Logradouro" />
+              <Mapping SourceColumn="Num" DataSetColumn="Num" />
+              <Mapping SourceColumn="Comp" DataSetColumn="Comp" />
+              <Mapping SourceColumn="Bairro" DataSetColumn="Bairro" />
+              <Mapping SourceColumn="Cidade" DataSetColumn="Cidade" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="CEP" DataSetColumn="CEP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatorioprodutosmaisvendidosTableAdapter" GeneratorDataComponentClassName="relatorioprodutosmaisvendidosTableAdapter" Name="relatorioprodutosmaisvendidos" UserDataComponentName="relatorioprodutosmaisvendidosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatorioprodutosmaisvendidos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CodProduto`, `QuantidadeVendida`, `Produto`, `ValorUnitario`, `ValorItens` FROM `ourtradecenter`.`relatorioprodutosmaisvendidos`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodProduto" DataSetColumn="CodProduto" />
+              <Mapping SourceColumn="QuantidadeVendida" DataSetColumn="QuantidadeVendida" />
+              <Mapping SourceColumn="Produto" DataSetColumn="Produto" />
+              <Mapping SourceColumn="ValorUnitario" DataSetColumn="ValorUnitario" />
+              <Mapping SourceColumn="ValorItens" DataSetColumn="ValorItens" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatorioprodutosmenosvendidosTableAdapter" GeneratorDataComponentClassName="relatorioprodutosmenosvendidosTableAdapter" Name="relatorioprodutosmenosvendidos" UserDataComponentName="relatorioprodutosmenosvendidosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatorioprodutosmenosvendidos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CodProduto`, `QuantidadeVendida`, `Produto`, `ValorUnitario`, `ValorItens` FROM `ourtradecenter`.`relatorioprodutosmenosvendidos`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodProduto" DataSetColumn="CodProduto" />
+              <Mapping SourceColumn="QuantidadeVendida" DataSetColumn="QuantidadeVendida" />
+              <Mapping SourceColumn="Produto" DataSetColumn="Produto" />
+              <Mapping SourceColumn="ValorUnitario" DataSetColumn="ValorUnitario" />
+              <Mapping SourceColumn="ValorItens" DataSetColumn="ValorItens" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatorioprodutovendidoultimos30diasTableAdapter" GeneratorDataComponentClassName="relatorioprodutovendidoultimos30diasTableAdapter" Name="relatorioprodutovendidoultimos30dias" UserDataComponentName="relatorioprodutovendidoultimos30diasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatorioprodutovendidoultimos30dias" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CodProduto`, `QuantidadeVendida`, `Produto`, `ValorUnitario`, `ValorItens` FROM `ourtradecenter`.`relatorioprodutovendidoultimos30dias`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodProduto" DataSetColumn="CodProduto" />
+              <Mapping SourceColumn="QuantidadeVendida" DataSetColumn="QuantidadeVendida" />
+              <Mapping SourceColumn="Produto" DataSetColumn="Produto" />
+              <Mapping SourceColumn="ValorUnitario" DataSetColumn="ValorUnitario" />
+              <Mapping SourceColumn="ValorItens" DataSetColumn="ValorItens" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatorioqntdvendafuncionarioTableAdapter" GeneratorDataComponentClassName="relatorioqntdvendafuncionarioTableAdapter" Name="relatorioqntdvendafuncionario" UserDataComponentName="relatorioqntdvendafuncionarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatorioqntdvendafuncionario" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `QuantidadeVendida`, `NomeFuncionario` FROM `ourtradecenter`.`relatorioqntdvendafuncionario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="QuantidadeVendida" DataSetColumn="QuantidadeVendida" />
+              <Mapping SourceColumn="NomeFuncionario" DataSetColumn="NomeFuncionario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="relatoriovendafuncionarioTableAdapter" GeneratorDataComponentClassName="relatoriovendafuncionarioTableAdapter" Name="relatoriovendafuncionario" UserDataComponentName="relatoriovendafuncionarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ourtradecenterConnectionString (Settings)" DbObjectName="ourtradecenter.relatoriovendafuncionario" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CodPedido`, `DataPedido`, `ValorTotal`, `NomeCliente`, `NomeFuncionario` FROM `ourtradecenter`.`relatoriovendafuncionario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodPedido" DataSetColumn="CodPedido" />
+              <Mapping SourceColumn="DataPedido" DataSetColumn="DataPedido" />
+              <Mapping SourceColumn="ValorTotal" DataSetColumn="ValorTotal" />
+              <Mapping SourceColumn="NomeCliente" DataSetColumn="NomeCliente" />
+              <Mapping SourceColumn="NomeFuncionario" DataSetColumn="NomeFuncionario" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ourtradecenterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ourtradecenterDataSet" msprop:Generator_UserDSName="ourtradecenterDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="relatoriofuncionario" msprop:Generator_TableClassName="relatoriofuncionarioDataTable" msprop:Generator_TableVarName="tablerelatoriofuncionario" msprop:Generator_TablePropName="relatoriofuncionario" msprop:Generator_RowDeletingName="relatoriofuncionarioRowDeleting" msprop:Generator_RowChangingName="relatoriofuncionarioRowChanging" msprop:Generator_RowEvHandlerName="relatoriofuncionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="relatoriofuncionarioRowDeleted" msprop:Generator_UserTableName="relatoriofuncionario" msprop:Generator_RowChangedName="relatoriofuncionarioRowChanged" msprop:Generator_RowEvArgName="relatoriofuncionarioRowChangeEvent" msprop:Generator_RowClassName="relatoriofuncionarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod" type="xs:unsignedInt" />
+              <xs:element name="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_UserColumnName="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_UserColumnName="CPF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataNascimento" msprop:Generator_ColumnVarNameInTable="columnDataNascimento" msprop:Generator_ColumnPropNameInRow="DataNascimento" msprop:Generator_ColumnPropNameInTable="DataNascimentoColumn" msprop:Generator_UserColumnName="DataNascimento" type="xs:dateTime" />
+              <xs:element name="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_UserColumnName="Sexo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_UserColumnName="Telefone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_UserColumnName="Cargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Logradouro" msprop:Generator_ColumnVarNameInTable="columnLogradouro" msprop:Generator_ColumnPropNameInRow="Logradouro" msprop:Generator_ColumnPropNameInTable="LogradouroColumn" msprop:Generator_UserColumnName="Logradouro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Num" msprop:Generator_ColumnVarNameInTable="columnNum" msprop:Generator_ColumnPropNameInRow="Num" msprop:Generator_ColumnPropNameInTable="NumColumn" msprop:Generator_UserColumnName="Num" type="xs:unsignedInt" />
+              <xs:element name="Comp" msprop:Generator_ColumnVarNameInTable="columnComp" msprop:Generator_ColumnPropNameInRow="Comp" msprop:Generator_ColumnPropNameInTable="CompColumn" msprop:Generator_UserColumnName="Comp" type="xs:unsignedShort" minOccurs="0" />
+              <xs:element name="Bairro" msprop:Generator_ColumnVarNameInTable="columnBairro" msprop:Generator_ColumnPropNameInRow="Bairro" msprop:Generator_ColumnPropNameInTable="BairroColumn" msprop:Generator_UserColumnName="Bairro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_UserColumnName="Cidade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CEP" msprop:Generator_ColumnVarNameInTable="columnCEP" msprop:Generator_ColumnPropNameInRow="CEP" msprop:Generator_ColumnPropNameInTable="CEPColumn" msprop:Generator_UserColumnName="CEP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatorioprodutosmaisvendidos" msprop:Generator_TableClassName="relatorioprodutosmaisvendidosDataTable" msprop:Generator_TableVarName="tablerelatorioprodutosmaisvendidos" msprop:Generator_TablePropName="relatorioprodutosmaisvendidos" msprop:Generator_RowDeletingName="relatorioprodutosmaisvendidosRowDeleting" msprop:Generator_RowChangingName="relatorioprodutosmaisvendidosRowChanging" msprop:Generator_RowEvHandlerName="relatorioprodutosmaisvendidosRowChangeEventHandler" msprop:Generator_RowDeletedName="relatorioprodutosmaisvendidosRowDeleted" msprop:Generator_UserTableName="relatorioprodutosmaisvendidos" msprop:Generator_RowChangedName="relatorioprodutosmaisvendidosRowChanged" msprop:Generator_RowEvArgName="relatorioprodutosmaisvendidosRowChangeEvent" msprop:Generator_RowClassName="relatorioprodutosmaisvendidosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodProduto" msprop:Generator_ColumnVarNameInTable="columnCodProduto" msprop:Generator_ColumnPropNameInRow="CodProduto" msprop:Generator_ColumnPropNameInTable="CodProdutoColumn" msprop:Generator_UserColumnName="CodProduto" type="xs:unsignedInt" />
+              <xs:element name="QuantidadeVendida" msprop:Generator_ColumnVarNameInTable="columnQuantidadeVendida" msprop:Generator_ColumnPropNameInRow="QuantidadeVendida" msprop:Generator_ColumnPropNameInTable="QuantidadeVendidaColumn" msprop:Generator_UserColumnName="QuantidadeVendida" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValorUnitario" msprop:Generator_ColumnVarNameInTable="columnValorUnitario" msprop:Generator_ColumnPropNameInRow="ValorUnitario" msprop:Generator_ColumnPropNameInTable="ValorUnitarioColumn" msprop:Generator_UserColumnName="ValorUnitario" type="xs:double" minOccurs="0" />
+              <xs:element name="ValorItens" msprop:Generator_ColumnVarNameInTable="columnValorItens" msprop:Generator_ColumnPropNameInRow="ValorItens" msprop:Generator_ColumnPropNameInTable="ValorItensColumn" msprop:Generator_UserColumnName="ValorItens" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatorioprodutosmenosvendidos" msprop:Generator_TableClassName="relatorioprodutosmenosvendidosDataTable" msprop:Generator_TableVarName="tablerelatorioprodutosmenosvendidos" msprop:Generator_TablePropName="relatorioprodutosmenosvendidos" msprop:Generator_RowDeletingName="relatorioprodutosmenosvendidosRowDeleting" msprop:Generator_RowChangingName="relatorioprodutosmenosvendidosRowChanging" msprop:Generator_RowEvHandlerName="relatorioprodutosmenosvendidosRowChangeEventHandler" msprop:Generator_RowDeletedName="relatorioprodutosmenosvendidosRowDeleted" msprop:Generator_UserTableName="relatorioprodutosmenosvendidos" msprop:Generator_RowChangedName="relatorioprodutosmenosvendidosRowChanged" msprop:Generator_RowEvArgName="relatorioprodutosmenosvendidosRowChangeEvent" msprop:Generator_RowClassName="relatorioprodutosmenosvendidosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodProduto" msprop:Generator_ColumnVarNameInTable="columnCodProduto" msprop:Generator_ColumnPropNameInRow="CodProduto" msprop:Generator_ColumnPropNameInTable="CodProdutoColumn" msprop:Generator_UserColumnName="CodProduto" type="xs:unsignedInt" />
+              <xs:element name="QuantidadeVendida" msprop:Generator_ColumnVarNameInTable="columnQuantidadeVendida" msprop:Generator_ColumnPropNameInRow="QuantidadeVendida" msprop:Generator_ColumnPropNameInTable="QuantidadeVendidaColumn" msprop:Generator_UserColumnName="QuantidadeVendida" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValorUnitario" msprop:Generator_ColumnVarNameInTable="columnValorUnitario" msprop:Generator_ColumnPropNameInRow="ValorUnitario" msprop:Generator_ColumnPropNameInTable="ValorUnitarioColumn" msprop:Generator_UserColumnName="ValorUnitario" type="xs:double" minOccurs="0" />
+              <xs:element name="ValorItens" msprop:Generator_ColumnVarNameInTable="columnValorItens" msprop:Generator_ColumnPropNameInRow="ValorItens" msprop:Generator_ColumnPropNameInTable="ValorItensColumn" msprop:Generator_UserColumnName="ValorItens" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatorioprodutovendidoultimos30dias" msprop:Generator_TableClassName="relatorioprodutovendidoultimos30diasDataTable" msprop:Generator_TableVarName="tablerelatorioprodutovendidoultimos30dias" msprop:Generator_TablePropName="relatorioprodutovendidoultimos30dias" msprop:Generator_RowDeletingName="relatorioprodutovendidoultimos30diasRowDeleting" msprop:Generator_RowChangingName="relatorioprodutovendidoultimos30diasRowChanging" msprop:Generator_RowEvHandlerName="relatorioprodutovendidoultimos30diasRowChangeEventHandler" msprop:Generator_RowDeletedName="relatorioprodutovendidoultimos30diasRowDeleted" msprop:Generator_UserTableName="relatorioprodutovendidoultimos30dias" msprop:Generator_RowChangedName="relatorioprodutovendidoultimos30diasRowChanged" msprop:Generator_RowEvArgName="relatorioprodutovendidoultimos30diasRowChangeEvent" msprop:Generator_RowClassName="relatorioprodutovendidoultimos30diasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodProduto" msprop:Generator_ColumnVarNameInTable="columnCodProduto" msprop:Generator_ColumnPropNameInRow="CodProduto" msprop:Generator_ColumnPropNameInTable="CodProdutoColumn" msprop:Generator_UserColumnName="CodProduto" type="xs:unsignedInt" />
+              <xs:element name="QuantidadeVendida" msprop:Generator_ColumnVarNameInTable="columnQuantidadeVendida" msprop:Generator_ColumnPropNameInRow="QuantidadeVendida" msprop:Generator_ColumnPropNameInTable="QuantidadeVendidaColumn" msprop:Generator_UserColumnName="QuantidadeVendida" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValorUnitario" msprop:Generator_ColumnVarNameInTable="columnValorUnitario" msprop:Generator_ColumnPropNameInRow="ValorUnitario" msprop:Generator_ColumnPropNameInTable="ValorUnitarioColumn" msprop:Generator_UserColumnName="ValorUnitario" type="xs:double" minOccurs="0" />
+              <xs:element name="ValorItens" msprop:Generator_ColumnVarNameInTable="columnValorItens" msprop:Generator_ColumnPropNameInRow="ValorItens" msprop:Generator_ColumnPropNameInTable="ValorItensColumn" msprop:Generator_UserColumnName="ValorItens" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatorioqntdvendafuncionario" msprop:Generator_TableClassName="relatorioqntdvendafuncionarioDataTable" msprop:Generator_TableVarName="tablerelatorioqntdvendafuncionario" msprop:Generator_TablePropName="relatorioqntdvendafuncionario" msprop:Generator_RowDeletingName="relatorioqntdvendafuncionarioRowDeleting" msprop:Generator_RowChangingName="relatorioqntdvendafuncionarioRowChanging" msprop:Generator_RowEvHandlerName="relatorioqntdvendafuncionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="relatorioqntdvendafuncionarioRowDeleted" msprop:Generator_UserTableName="relatorioqntdvendafuncionario" msprop:Generator_RowChangedName="relatorioqntdvendafuncionarioRowChanged" msprop:Generator_RowEvArgName="relatorioqntdvendafuncionarioRowChangeEvent" msprop:Generator_RowClassName="relatorioqntdvendafuncionarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QuantidadeVendida" msprop:Generator_ColumnVarNameInTable="columnQuantidadeVendida" msprop:Generator_ColumnPropNameInRow="QuantidadeVendida" msprop:Generator_ColumnPropNameInTable="QuantidadeVendidaColumn" msprop:Generator_UserColumnName="QuantidadeVendida" type="xs:long" />
+              <xs:element name="NomeFuncionario" msprop:Generator_ColumnVarNameInTable="columnNomeFuncionario" msprop:Generator_ColumnPropNameInRow="NomeFuncionario" msprop:Generator_ColumnPropNameInTable="NomeFuncionarioColumn" msprop:Generator_UserColumnName="NomeFuncionario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatoriovendafuncionario" msprop:Generator_TableClassName="relatoriovendafuncionarioDataTable" msprop:Generator_TableVarName="tablerelatoriovendafuncionario" msprop:Generator_TablePropName="relatoriovendafuncionario" msprop:Generator_RowDeletingName="relatoriovendafuncionarioRowDeleting" msprop:Generator_RowChangingName="relatoriovendafuncionarioRowChanging" msprop:Generator_RowEvHandlerName="relatoriovendafuncionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="relatoriovendafuncionarioRowDeleted" msprop:Generator_UserTableName="relatoriovendafuncionario" msprop:Generator_RowChangedName="relatoriovendafuncionarioRowChanged" msprop:Generator_RowEvArgName="relatoriovendafuncionarioRowChangeEvent" msprop:Generator_RowClassName="relatoriovendafuncionarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodPedido" msprop:Generator_ColumnVarNameInTable="columnCodPedido" msprop:Generator_ColumnPropNameInRow="CodPedido" msprop:Generator_ColumnPropNameInTable="CodPedidoColumn" msprop:Generator_UserColumnName="CodPedido" type="xs:unsignedInt" />
+              <xs:element name="DataPedido" msprop:Generator_ColumnVarNameInTable="columnDataPedido" msprop:Generator_ColumnPropNameInRow="DataPedido" msprop:Generator_ColumnPropNameInTable="DataPedidoColumn" msprop:Generator_UserColumnName="DataPedido" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ValorTotal" msprop:Generator_ColumnVarNameInTable="columnValorTotal" msprop:Generator_ColumnPropNameInRow="ValorTotal" msprop:Generator_ColumnPropNameInTable="ValorTotalColumn" msprop:Generator_UserColumnName="ValorTotal" type="xs:double" minOccurs="0" />
+              <xs:element name="NomeCliente" msprop:Generator_ColumnVarNameInTable="columnNomeCliente" msprop:Generator_ColumnPropNameInRow="NomeCliente" msprop:Generator_ColumnPropNameInTable="NomeClienteColumn" msprop:Generator_UserColumnName="NomeCliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NomeFuncionario" msprop:Generator_ColumnVarNameInTable="columnNomeFuncionario" msprop:Generator_ColumnPropNameInRow="NomeFuncionario" msprop:Generator_ColumnPropNameInTable="NomeFuncionarioColumn" msprop:Generator_UserColumnName="NomeFuncionario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:relatoriofuncionario" />
+      <xs:field xpath="mstns:Cod" />
+    </xs:unique>
+    <xs:unique name="relatoriovendafuncionario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:relatoriovendafuncionario" />
+      <xs:field xpath="mstns:CodPedido" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

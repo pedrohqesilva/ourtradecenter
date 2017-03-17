@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53B0E1CA-C460-42B4-B28D-1F4E397A7CFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlaEstoque</RootNamespace>
+    <AssemblyName>ControlaEstoque</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brasil.cs" />
+    <Compile Include="ConexaoBanco.cs" />
+    <Compile Include="Cliente\frmClientePergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmClientePergunta.Designer.cs">
+      <DependentUpon>frmClientePergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmCartao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmCartao.Designer.cs">
+      <DependentUpon>frmCartao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\frmRelatorioFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\frmRelatorioFuncionario.Designer.cs">
+      <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\frmRelatorioProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\frmRelatorioProduto.Designer.cs">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ourtradecenterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ourtradecenterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Ingrediente\frmVisualizarEstIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Ingrediente\frmVisualizarEstIngrediente.Designer.cs">
+      <DependentUpon>frmVisualizarEstIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Produto\frmVisualizarEstProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Produto\frmVisualizarEstProduto.Designer.cs">
+      <DependentUpon>frmVisualizarEstProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmPesquisaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmPesquisaProduto.Designer.cs">
+      <DependentUpon>frmPesquisaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProdutoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProdutoMenu.Designer.cs">
+      <DependentUpon>frmProdutoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProdutoPergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProdutoPergunta.Designer.cs">
+      <DependentUpon>frmProdutoPergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngredientePergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngredientePergunta.Designer.cs">
+      <DependentUpon>frmIngredientePergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngredienteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngredienteMenu.Designer.cs">
+      <DependentUpon>frmIngredienteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmPesquisaIngredientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmPesquisaIngredientes.Designer.cs">
+      <DependentUpon>frmPesquisaIngredientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionarioPergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionarioPergunta.Designer.cs">
+      <DependentUpon>frmFuncionarioPergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionarioMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionarioMenu.Designer.cs">
+      <DependentUpon>frmFuncionarioMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionário\frmPesquisaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionário\frmPesquisaFuncionario.Designer.cs">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmClienteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmClienteMenu.Designer.cs">
+      <DependentUpon>frmClienteMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmPesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmPesquisaCliente.Designer.cs">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Ingrediente\frmEstoqueIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Ingrediente\frmEstoqueIngrediente.Designer.cs">
+      <DependentUpon>frmEstoqueIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Produto\frmEstoqueProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Estoque\Produto\frmEstoqueProduto.Designer.cs">
+      <DependentUpon>frmEstoqueProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apoio\frmGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apoio\frmGrupo.Designer.cs">
+      <DependentUpon>frmGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\Mensagem\frmMensagemPergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\Mensagem\frmMensagemPergunta.Designer.cs">
+      <DependentUpon>frmMensagemPergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmMenuGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmMenuGerente.Designer.cs">
+      <DependentUpon>frmMenuGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Ingrediente\frmIngrediente.Designer.cs">
+      <DependentUpon>frmIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Estoque\frmMenuEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Estoque\frmMenuEstoque.Designer.cs">
+      <DependentUpon>frmMenuEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\Mensagem\frmMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\Mensagem\frmMensagem.Designer.cs">
+      <DependentUpon>frmMensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmMenuFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmMenuFuncionario.Designer.cs">
+      <DependentUpon>frmMenuFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\frmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\frmPedido.Designer.cs">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\frmFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedido e Pagamento\frmFatura.Designer.cs">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionário\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos\Produto\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cliente\frmClientePergunta.resx">
+      <DependentUpon>frmClientePergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmCartao.resx">
+      <DependentUpon>frmCartao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\frmRelatorioFuncionario.resx">
+      <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\frmRelatorioProduto.resx">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Estoque\Ingrediente\frmVisualizarEstIngrediente.resx">
+      <DependentUpon>frmVisualizarEstIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Estoque\Produto\frmVisualizarEstProduto.resx">
+      <DependentUpon>frmVisualizarEstProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Ingrediente\frmIngredientePergunta.resx">
+      <DependentUpon>frmIngredientePergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Ingrediente\frmIngredienteMenu.resx">
+      <DependentUpon>frmIngredienteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Ingrediente\frmPesquisaIngredientes.resx">
+      <DependentUpon>frmPesquisaIngredientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionário\frmFuncionarioMenu.resx">
+      <DependentUpon>frmFuncionarioMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionário\frmFuncionarioPergunta.resx">
+      <DependentUpon>frmFuncionarioPergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionário\frmPesquisaFuncionario.resx">
+      <DependentUpon>frmPesquisaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmClienteMenu.resx">
+      <DependentUpon>frmClienteMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmPesquisaCliente.resx">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Estoque\Ingrediente\frmEstoqueIngrediente.resx">
+      <DependentUpon>frmEstoqueIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Estoque\Produto\frmEstoqueProduto.resx">
+      <DependentUpon>frmEstoqueProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apoio\frmGrupo.resx">
+      <DependentUpon>frmGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido e Pagamento\Mensagem\frmMensagemPergunta.resx">
+      <DependentUpon>frmMensagemPergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Ingrediente\frmIngrediente.resx">
+      <DependentUpon>frmIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Estoque\frmMenuEstoque.resx">
+      <DependentUpon>frmMenuEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmMenuGerente.resx">
+      <DependentUpon>frmMenuGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido e Pagamento\Mensagem\frmMensagem.resx">
+      <DependentUpon>frmMensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmMenuFuncionario.resx">
+      <DependentUpon>frmMenuFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido e Pagamento\frmPedido.resx">
+      <DependentUpon>frmPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pedido e Pagamento\frmFatura.resx">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionário\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Produto\frmPesquisaProduto.resx">
+      <DependentUpon>frmPesquisaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Produto\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Produto\frmProdutoMenu.resx">
+      <DependentUpon>frmProdutoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos\Produto\frmProdutoPergunta.resx">
+      <DependentUpon>frmProdutoPergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <None Include="ourtradecenterDataSet.xsc">
+      <DependentUpon>ourtradecenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ourtradecenterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ourtradecenterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ourtradecenterDataSet.xss">
+      <DependentUpon>ourtradecenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
